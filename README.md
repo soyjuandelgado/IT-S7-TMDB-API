@@ -1,59 +1,82 @@
-# ITS7TMDBAPI
+# IT-S7-TMDB-API
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.3.
+## 🗂️Tabla de contenidos
 
-## Development server
+- [IT-S7-TMDB-API](#it-s7-tmdb-api)
+  - [🗂️Tabla de contenidos](#️tabla-de-contenidos)
+  - [📄Descripción](#descripción)
+    - [1.](#1)
+  - [💻Tecnologías Utilizadas](#tecnologías-utilizadas)
+  - [📋Requisitos](#requisitos)
+  - [🛠️Instalación](#️instalación)
+    - [1. Descargar el repositorio](#1-descargar-el-repositorio)
+    - [2. Instalación de paquetes Node.js](#2-instalación-de-paquetes-nodejs)
+  - [▶️Ejecución](#️ejecución)
+    - [Testing](#testing)
+  - [📸 Demo](#-demo)
 
-To start a local development server, run:
+## 📄Descripción
 
-```bash
-ng serve
+PENDIENTE
+
+### 1. 
+
+PENDIENTE
+- PENDIENTE
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-top: 1rem;">
+  <img src="public/ex5.png" width="400" style="vertical-align: top;">
+  <img src="public/ex5-error.png" width="400" style="vertical-align: top;">
+</div>
+
+<img src="public/ex2.png" width="500" style="margin-top: 1rem; margin-bottom: 1rem;">
+
+## 💻Tecnologías Utilizadas
+
+PENDIENTE
+
+- HTML
+- SASS
+- Typescript
+- Angular
+- Eslint
+- Karma / Jasmine
+
+## 📋Requisitos
+
+PENDIENTE 
+
+- Navegador web
+- Node.js
+  
+## 🛠️Instalación
+
+PENDIENTE
+
+### 1. Descargar el repositorio
+
+```shell
+git clone https://github.com/soyjuandelgado/IT-S7-TMDB-API.git destino
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### 2. Instalación de paquetes Node.js
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```shell
+npm install
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## ▶️Ejecución
 
-```bash
-ng generate --help
+```shell
+ng serve -o
 ```
 
-## Building
+### Testing
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
+```shell
 ng test
 ```
 
-## Running end-to-end tests
+## 📸 Demo
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Visitar la web: [Web](https://it-s7-tmdb-api.vercel.app/)
