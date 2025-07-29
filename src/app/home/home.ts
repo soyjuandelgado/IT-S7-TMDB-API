@@ -1,11 +1,12 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { environment } from '../../environments/environment';
-import { TMDBApiService } from '../shared/tmdb-api-service';
-import { IMovies } from '../shared/imovies';
+import { TMDBApiService } from '../shared/services/tmdb-api-service';
+import { IMovies } from '../shared/models/imovies';
+import {MatCardModule} from '@angular/material/card';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [MatCardModule],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })

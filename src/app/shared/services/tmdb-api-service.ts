@@ -1,7 +1,7 @@
 import { inject, Injectable } from '@angular/core';
-import { environment } from '../../environments/environment';
+import { environment } from '../../../environments/environment';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { IMovies } from './imovies';
+import { IMovies } from '../models/imovies';
 
 @Injectable({
   providedIn: 'root',
