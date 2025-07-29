@@ -5,6 +5,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterOutlet } from '@angular/router';
 import { TMDBApiService } from './shared/tmdb-api-service';
 import { IMovies } from './shared/imovies';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,7 @@ export class App implements OnInit {
     page: 0,
     results: [],
   });
+  imgPath = environment.TMDB_IMG_PATH_500;
 
   //TODO: cargar peliculas al inicio
   ngOnInit() {
