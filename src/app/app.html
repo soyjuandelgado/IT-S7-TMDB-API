@@ -1,5 +1,5 @@
 <mat-toolbar>
-  <button matIconButton class="example-icon" aria-label="Example icon-button with menu icon" (click)="getMovies()">
+  <button matIconButton class="example-icon" aria-label="Example icon-button with menu icon">
     <mat-icon>menu</mat-icon>
   </button>
   <span>TMDB: Ahora en cartelera</span>
@@ -13,5 +13,10 @@
 </mat-toolbar>
 
 <main>
+    <p>Página:{{this.movies().page}}</p>
+    @for (movie of this.movies().results; track $index) {
+      <h2>{{movie.title}}</h2>
+      <p>{{movie.vote_average}}</p>
+    }
   <router-outlet />
 </main>
