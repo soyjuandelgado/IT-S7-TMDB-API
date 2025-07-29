@@ -19,14 +19,15 @@ export class Home implements OnInit {
   });
   imgPath = environment.TMDB_IMG_PATH_500;
 
-  //TODO: cargar peliculas al inicio
   ngOnInit() {
-    this.api.getMovies().subscribe((response) => {
+    this.api.getMovies().subscribe({
+      next: (response) => {
       this.movies.set(response);
-      console.log(response);
-      console.log(this.movies());
-    });
+    },
+    error: (err) => {
+      console.error("Error al abtener peliculas", err);
+    }})
   }
-  //TODO: controlar el tiempo de espera
+  //TODO: controlar el tiempo de espera y mostrar animación
 }
 
