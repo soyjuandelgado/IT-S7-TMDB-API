@@ -5,7 +5,7 @@
 - [IT-S7-TMDB-API](#it-s7-tmdb-api)
   - [🗂️Tabla de contenidos](#️tabla-de-contenidos)
   - [📄Descripción](#descripción)
-    - [1.](#1)
+    - [1. Listado de películas](#1-listado-de-películas)
   - [💻Tecnologías Utilizadas](#tecnologías-utilizadas)
   - [📋Requisitos](#requisitos)
   - [🛠️Instalación](#️instalación)
@@ -19,10 +19,16 @@
 
 PENDIENTE
 
-### 1. 
+Web donde se visualizan las películas últimas películas en cartelera, nutriéndose de la API de TMDB.
+Se puede acceder a los detalles de cada película
 
-PENDIENTE
-- PENDIENTE
+### 1. Listado de películas
+
+- Creación de la estructura básica del proyecto.
+- Conexión con la API de TMDB a través de un servicio.
+- Separación de datos en variables de entorno.
+- Creación de componente `Home`.
+- Mostrar información e imágenes del listado de películas.
 
 <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-top: 1rem;">
   <img src="public/ex5.png" width="400" style="vertical-align: top;">
@@ -41,6 +47,7 @@ PENDIENTE
 - Angular
 - Eslint
 - Karma / Jasmine
+- Angular Material
 
 ## 📋Requisitos
 
