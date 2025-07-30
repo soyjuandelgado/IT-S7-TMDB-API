@@ -22,10 +22,13 @@ export class TMDBApiService {
   private params = new HttpParams().set('language', 'es-ES');
   //.set("page", "1")
 
-  getMovies() {
+  getMovies(page?:number) {
+    let p = this.params
+    if(page)
+      p = this.params.append("page", page)
     return this.http
       .get<IMovies>(environment.TMDB_NOW_PLAYING_URL, {
-        params: this.params,
+        params: p,
         headers: this.headers,
       })
       .pipe(catchError(this.handleError));

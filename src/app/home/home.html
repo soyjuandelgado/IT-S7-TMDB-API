@@ -1,5 +1,5 @@
-<p>Página:{{this.movies()!.page}}</p>
-@for (movie of this.movies()!.results; track $index) {
+<p>Página:{{this.movies()?.page}}</p>
+@for (movie of this.movies()?.results; track $index) {
     <mat-card>
         <img mat-card-image src="{{imgPath}}{{movie.poster_path}}" alt="poster">
             <mat-card-title>{{movie.title}}</mat-card-title>
@@ -9,3 +9,4 @@
         </mat-card-actions>
     </mat-card>
 }
+<button type="button" (click)="showMoreMovies()">Cargar más</button>
