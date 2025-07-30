@@ -4,10 +4,11 @@ import { TMDBApiService } from '../shared/services/tmdb-api-service';
 import { IMovies } from '../shared/models/imovies';
 import { MatCardModule } from '@angular/material/card';
 import { Router } from '@angular/router';
+import { ScrollEnd } from '../shared/directives/scroll-end';
 
 @Component({
   selector: 'app-home',
-  imports: [MatCardModule],
+  imports: [MatCardModule, ScrollEnd],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
