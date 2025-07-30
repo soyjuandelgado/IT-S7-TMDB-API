@@ -1,0 +1,15 @@
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ejemplo: columnas que se ajustan automáticamente */
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-title{
+    padding: 0.5rem;
+    width: calc(100% - 1rem);
+}
