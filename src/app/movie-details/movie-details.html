@@ -1,0 +1,33 @@
+<img src="{{imgPath}}{{movie()?.poster_path}}" alt="Portada de {{movie()?.title}}">
+<h1>{{movie()?.title}}</h1>
+<h2>{{movie()?.tagline}}</h2>
+<h3>{{((movie()?.vote_average || 0) * 10).toFixed(0)}}%</h3>
+<span>{{movie()?.release_date}}</span>
+<span>
+    @for (genre of movie()?.genres; track $index) {
+        @if ($index > 0) {,} {{genre.name}}
+    }
+</span>
+<span>{{movie()?.runtime}} minutos</span>
+<p>{{movie()?.overview}}</p>
+
+<h2>Reparto</h2>
+<p>
+    @for (c of movie()?.credits?.cast; track $index) {
+    @if($index > 0) {,} {{c.name}}
+    }
+</p>
+
+<h2>Películas Similares</h2>
+    @for (s of movie()?.similar?.results; track $index) {
+        <button type="button" (click)="showMovieDetails(s.id)">
+            <img src="{{imgPath}}{{s.poster_path}}" alt="Portada de {{s.title}}" width="100px">
+        </button>
+    }
+
+<h2>Películas Recomendadas</h2>
+    @for (r of movie()?.recommendations?.results; track $index) {
+        <button type="button" (click)="showMovieDetails(r.id)">
+            <img src="{{imgPath}}{{r.poster_path}}" alt="Portada de {{r.title}}" width="100px">
+        </button>
+    }

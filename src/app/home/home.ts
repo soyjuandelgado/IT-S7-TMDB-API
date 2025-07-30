@@ -3,6 +3,7 @@ import { environment } from '../../environments/environment';
 import { TMDBApiService } from '../shared/services/tmdb-api-service';
 import { IMovies } from '../shared/models/imovies';
 import {MatCardModule} from '@angular/material/card';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,12 +13,9 @@ import {MatCardModule} from '@angular/material/card';
 })
 export class Home implements OnInit {
   api = inject(TMDBApiService);
-  movies = signal<IMovies>({
-    dates: { maximum: '', minimum: '' },
-    page: 0,
-    results: [],
-  });
+  movies = signal<IMovies | undefined>(undefined);
   imgPath = environment.TMDB_IMG_PATH_500;
+  router = inject(Router)
 
   ngOnInit() {
     this.api.getMovies().subscribe({
@@ -25,9 +23,13 @@ export class Home implements OnInit {
       this.movies.set(response);
     },
     error: (err) => {
-      console.error("Error al abtener peliculas", err);
+      console.error("Error al obtener películas", err);
     }})
   }
   //TODO: controlar el tiempo de espera y mostrar animación
+
+  showMovieDetails(id: number){
+    this.router.navigate(["/movie"], {queryParams:{id: id}})
+  }
 }
 

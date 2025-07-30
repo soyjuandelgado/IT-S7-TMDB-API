@@ -1,13 +1,11 @@
-<p>Página:{{this.movies().page}}</p>
-@for (movie of this.movies().results; track $index) {
+<p>Página:{{this.movies()!.page}}</p>
+@for (movie of this.movies()!.results; track $index) {
     <mat-card>
-        <mat-card-header>
-            <mat-card-title>{{movie.title}}</mat-card-title>
-        </mat-card-header>
         <img mat-card-image src="{{imgPath}}{{movie.poster_path}}" alt="poster">
-        <mat-card-subtitle>fecha: {{movie.release_date}}  - vote: {{movie.vote_average}}</mat-card-subtitle>
+            <mat-card-title>{{movie.title}}</mat-card-title>
+        <mat-card-subtitle>fecha: {{movie.release_date}}  - puntuación: {{(movie.vote_average * 10).toFixed(0)}}%</mat-card-subtitle>
         <mat-card-actions>
-            <button matButton value="{{movie.id}}">Detalles</button>
+            <button matButton (click)="showMovieDetails(movie.id)">Detalles</button>
         </mat-card-actions>
     </mat-card>
 }

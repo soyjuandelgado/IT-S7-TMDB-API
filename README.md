@@ -6,6 +6,7 @@
   - [🗂️Tabla de contenidos](#️tabla-de-contenidos)
   - [📄Descripción](#descripción)
     - [1. Listado de películas](#1-listado-de-películas)
+    - [2. Detalles de la película](#2-detalles-de-la-película)
   - [💻Tecnologías Utilizadas](#tecnologías-utilizadas)
   - [📋Requisitos](#requisitos)
   - [🛠️Instalación](#️instalación)
@@ -30,9 +31,24 @@ Se puede acceder a los detalles de cada película
 - Creación de componente `Home`.
 - Mostrar información e imágenes del listado de películas.
 
+
+### 2. Detalles de la película
+
+- Componente `movie-details` para la carga de datos.
+- Añadida funcionalidad al servicio, cargando más información de la API.
+  - Obtener detalles de la película.
+  - Créditos.
+  - Películas similares.
+  - Películas recomendadas.
+- Diseño básico de pantalla de MovieDetails.
+- Carga de datos.
+- Movimento entre películas mediante rutas.
+- Optimización de llamada a la API.
+
 <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-top: 1rem;">
-  <img src="public/ex5.png" width="400" style="vertical-align: top;">
-  <img src="public/ex5-error.png" width="400" style="vertical-align: top;">
+  <img src="public/ex2.png" width="300" style="vertical-align: top;">
+  <img src="public/ex2-similar.png" width="300" style="vertical-align: top;">
+  <img src="public/ex2-recommendations.png" width="300" style="vertical-align: top;">
 </div>
 
 <img src="public/ex2.png" width="500" style="margin-top: 1rem; margin-bottom: 1rem;">

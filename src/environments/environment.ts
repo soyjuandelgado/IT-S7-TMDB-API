@@ -6,6 +6,8 @@ export const environment = {
   TMDB_DETAILS_URL: 'https://api.themoviedb.org/3/movie/{movie_id}',
   TMDB_RECOMMENDATIONS_URL:
     'https://api.themoviedb.org/3/movie/{movie_id}/recommendations',
+  TMDB_CREDITS_URL: 'https://api.themoviedb.org/3/movie/{movie_id}/credits',
+  TMDB_SIMILAR_URL: 'https://api.themoviedb.org/3/movie/{movie_id}/similar',
   TMDB_IMG_PATH_500: 'https://image.tmdb.org/t/p/w500',
   TMDB_IMG_PATH_200: 'https://image.tmdb.org/t/p/w200',
 };
