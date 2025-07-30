@@ -1,6 +1,6 @@
 .card-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ejemplo: columnas que se ajustan automáticamente */
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ejemplo: columnas que se ajustan automáticamente */
   gap: 1rem;
 }
 

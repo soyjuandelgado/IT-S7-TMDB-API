@@ -15,6 +15,7 @@
 <p>
     @for (c of movie()?.credits?.cast; track $index) {
         <button type="button">
+            <!-- TODO imagen vacia para quien no tiene foto -->
             <img src="{{imgPath}}{{c.profile_path}}" alt="Portada de {{c.name}}" width="100px">
             <p><span>{{c.character}}</span><br>{{c.name}}</p>
         </button>
