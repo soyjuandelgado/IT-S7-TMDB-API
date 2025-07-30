@@ -14,7 +14,10 @@
 <h2>Reparto</h2>
 <p>
     @for (c of movie()?.credits?.cast; track $index) {
-    @if($index > 0) {,} {{c.name}}
+        <button type="button">
+            <img src="{{imgPath}}{{c.profile_path}}" alt="Portada de {{c.name}}" width="100px">
+            <p><span>{{c.character}}</span><br>{{c.name}}</p>
+        </button>
     }
 </p>
 

@@ -7,6 +7,7 @@
   - [📄Descripción](#descripción)
     - [1. Listado de películas](#1-listado-de-películas)
     - [2. Detalles de la película](#2-detalles-de-la-película)
+    - [3. Carga de más películas](#3-carga-de-más-películas)
   - [💻Tecnologías Utilizadas](#tecnologías-utilizadas)
   - [📋Requisitos](#requisitos)
   - [🛠️Instalación](#️instalación)
@@ -31,7 +32,6 @@ Se puede acceder a los detalles de cada película
 - Creación de componente `Home`.
 - Mostrar información e imágenes del listado de películas.
 
-
 ### 2. Detalles de la película
 
 - Componente `movie-details` para la carga de datos.
@@ -51,7 +51,14 @@ Se puede acceder a los detalles de cada película
   <img src="public/ex2-recommendations.png" width="300" style="vertical-align: top;">
 </div>
 
-<img src="public/ex2.png" width="500" style="margin-top: 1rem; margin-bottom: 1rem;">
+### 3. Carga de más películas
+
+- Modificar carga de datos tienendo en cuenta la paginación.
+- Función `appendMovies()`.
+- Directiva `scroll-end`.
+- Carga automática de películas extra al llegar al final de la página.
+
+<img src="public/ex3.png" width="400" style="margin-top: 1rem; margin-bottom: 1rem;">
 
 ## 💻Tecnologías Utilizadas
 

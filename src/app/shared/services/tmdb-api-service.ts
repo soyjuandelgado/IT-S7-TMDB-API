@@ -22,16 +22,19 @@ export class TMDBApiService {
   private params = new HttpParams().set('language', 'es-ES');
   //.set("page", "1")
 
-  getMovies() {
+  getMovies$(page?:number) {
+    let p = this.params
+    if(page)
+      p = this.params.append("page", page)
     return this.http
       .get<IMovies>(environment.TMDB_NOW_PLAYING_URL, {
-        params: this.params,
+        params: p,
         headers: this.headers,
       })
       .pipe(catchError(this.handleError));
   }
 
-  getMovieDetails(id: number) {
+  getMovieDetails$(id: number) {
     return this.http
       .get<IMovieDetails>(
         environment.TMDB_DETAILS_URL.replace('{movie_id}', id.toString()),
@@ -43,7 +46,7 @@ export class TMDBApiService {
       .pipe(catchError(this.handleError));
   }
 
-  getMovieDetailsAndSimilarRecommendationsCredits(id: number) {
+  getMovieDetailsAndSimilarRecommendationsCredits$(id: number) {
     return this.http
       .get<IMovieDetails>(
         environment.TMDB_DETAILS_URL.replace('{movie_id}', id.toString()),
