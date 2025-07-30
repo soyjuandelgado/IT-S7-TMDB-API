@@ -19,13 +19,15 @@ export class MovieDetails implements OnInit {
   route = inject(ActivatedRoute);
   router = inject(Router);
 
+  constructor(){
+    effect(() => {
+      this.loadMovieDetails(this.id());
+    });
+  }
   ngOnInit() {
     this.route.queryParams.subscribe((params) => {
       const newId = params['id'];
       if (!isNaN(newId) && newId !== this.id()) this.id.set(params['id']);
-    });
-    effect(() => {
-      this.loadMovieDetails(this.id());
     });
   }
 
