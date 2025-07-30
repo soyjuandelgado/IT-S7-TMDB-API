@@ -49,7 +49,7 @@ export class Home implements OnInit {
   }
 
   showMoreMovies() {
-    const page = this.movies()!.page + 1;
+    const page = (this.movies()?.page || 0) + 1;
     this.getMovies(page);
   }
   appendMovies(resp: IMovies) {
