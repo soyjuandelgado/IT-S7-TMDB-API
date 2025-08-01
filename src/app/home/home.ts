@@ -5,10 +5,11 @@ import { IMovies } from '../shared/models/imovies';
 import { MatCardModule } from '@angular/material/card';
 import { Router } from '@angular/router';
 import { ScrollEnd } from '../shared/directives/scroll-end';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-home',
-  imports: [MatCardModule, ScrollEnd],
+  imports: [MatCardModule, ScrollEnd, DatePipe],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
