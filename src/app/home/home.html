@@ -6,7 +6,8 @@
                 <mat-card-title>{{movie.title}}</mat-card-title>
                 <mat-card-subtitle>fecha: {{movie.release_date}}  - puntuación: {{(movie.vote_average * 10).toFixed(0)}}%</mat-card-subtitle>
             </mat-card-title-group> 
-            <mat-card-actions>
+            <div style="margin:auto"></div>
+             <mat-card-actions>
                 <button matButton="filled" (click)="showMovieDetails(movie.id)">Detalles</button>
             </mat-card-actions>
         </mat-card>
