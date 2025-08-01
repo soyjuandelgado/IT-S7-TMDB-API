@@ -1,7 +1,25 @@
-.example-spacer {
-  flex: 1 1 auto;
+main {
+  padding: 2rem;
+  padding-top: 5rem;
 }
 
-main{
-  margin: 2rem;
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #032541;
 }
+.logo{
+  //width: 35%;
+  height: 1.5rem;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+.icon-button {
+  color: white;
+}
+
+

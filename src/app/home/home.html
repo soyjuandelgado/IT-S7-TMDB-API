@@ -1,6 +1,6 @@
 <section class="card-list">
     @for (movie of this.movies()?.results; track $index) {
-        <mat-card class="card" (click)="showMovieDetails(movie.id)">
+        <mat-card class="card" appearance="outlined" (click)="showMovieDetails(movie.id)">
             <img mat-card-image src="{{imgPath}}{{movie.poster_path}}" alt="poster de {{movie.title}}">
             <div class="movie-average-circle">
                 <span class="average-number">{{(movie.vote_average * 10).toFixed(0)}}</span><span class="average-percent">%</span>
