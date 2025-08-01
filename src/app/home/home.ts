@@ -16,7 +16,7 @@ import { DatePipe } from '@angular/common';
 export class Home implements OnInit {
   api = inject(TMDBApiService);
   movies = signal<IMovies | undefined>(undefined);
-  imgPath = environment.TMDB_IMG_PATH_200;
+  imgPath = environment.TMDB_IMG_PATH_500;
   router = inject(Router);
 
   ngOnInit() {
