@@ -34,10 +34,12 @@ export class Home implements OnInit {
           // console.log(this.movies())
         }
         else {
-          //TODO: comprobar que no se cargue de nuevo la ultima pagina
-          this.appendMovies(response)
-          // console.log("Pagina:"+ page)
-          // console.log(this.movies())
+          if(this.movies()!.page != response.page){
+            //TODO: comprobar que no se cargue de nuevo la ultima pagina
+            this.appendMovies(response)
+            // console.log("Pagina:"+ page)
+            // console.log(this.movies())
+          }
         }
       },
       error: (err) => {
