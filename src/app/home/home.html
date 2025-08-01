@@ -3,6 +3,7 @@
         <mat-card class="card" appearance="outlined" (click)="showMovieDetails(movie.id)">
             <img mat-card-image src="{{imgPath}}{{movie.poster_path}}" alt="poster de {{movie.title}}">
             <div class="movie-average-circle">
+                <mat-spinner mode="determinate" value="{{(movie.vote_average * 10).toFixed(0)}}" class="movie-average-spinner"></mat-spinner>
                 <span class="average-number">{{(movie.vote_average * 10).toFixed(0)}}</span><span class="average-percent">%</span>
             </div>
             <mat-card-title-group class="card-title-group">

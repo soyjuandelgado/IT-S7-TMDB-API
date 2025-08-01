@@ -6,6 +6,13 @@
 // custom components at https://material.angular.dev/guide/theming
 @use '@angular/material' as mat;
 
+// @use '@angular/material' as mat;
+:root {
+  @include mat.progress-spinner-overrides((
+    active-indicator-color: #2dbbd0,
+  ));
+}
+
 html {
   @include mat.theme((
     color: (
@@ -38,3 +45,5 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width: 1200px;
   }
 }
+
+
