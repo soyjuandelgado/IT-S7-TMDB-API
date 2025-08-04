@@ -2,11 +2,12 @@ import { Component, inject, signal, OnInit } from '@angular/core';
 import { TMDBApiService } from '../shared/services/tmdb-api-service';
 import { IMovies } from '../shared/models/imovies';
 import { ScrollEnd } from '../shared/directives/scroll-end';
-import { MovieCard } from '../movie-card/movie-card';
+import { MovieCardList } from '../movie-card-list/movie-card-list';
+
 
 @Component({
   selector: 'app-home',
-  imports: [ScrollEnd, MovieCard],
+  imports: [ScrollEnd, MovieCardList],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
@@ -26,15 +27,10 @@ export class Home implements OnInit {
       next: (response) => {
         if (!this.movies()) {
           this.movies.set(response)
-          // console.log("Primera página")
-          // console.log(this.movies())
         }
         else {
           if(this.movies()!.page != response.page){
-            //TODO: comprobar que no se cargue de nuevo la ultima pagina
             this.appendMovies(response)
-            // console.log("Pagina:"+ page)
-            // console.log(this.movies())
           }
         }
       },

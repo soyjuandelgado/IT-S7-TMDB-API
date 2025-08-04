@@ -1,6 +1,2 @@
-<section class="card-list">
-    @for (movie of this.movies()?.results; track $index) {
-        <app-movie-card [movie] = movie></app-movie-card>
-    }
-</section>
+<app-movie-card-list [movies]="this.movies()!"></app-movie-card-list>
 <h3 appScrollEnd (scrolledToEnd)="showMoreMovies()">Cargando más películas</h3>
