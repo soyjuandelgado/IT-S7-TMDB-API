@@ -50,10 +50,6 @@ export class Home implements OnInit {
       },
     });
   }
-  showMovieDetails(id: number) {
-    this.router.navigate(['/movie'], { queryParams: { id: id } });
-  }
-
   showMoreMovies() {
     const page = (this.movies()?.page || 0) + 1;
     this.getMovies(page);
