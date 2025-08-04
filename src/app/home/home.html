@@ -1,12 +1,2 @@
-<p>Página:{{this.movies()?.page}}</p>
-@for (movie of this.movies()?.results; track $index) {
-    <mat-card>
-        <img mat-card-image src="{{imgPath}}{{movie.poster_path}}" alt="poster" width="200px">
-            <mat-card-title>{{movie.title}}</mat-card-title>
-        <mat-card-subtitle>fecha: {{movie.release_date}}  - puntuación: {{(movie.vote_average * 10).toFixed(0)}}%</mat-card-subtitle>
-        <mat-card-actions>
-            <button matButton (click)="showMovieDetails(movie.id)">Detalles</button>
-        </mat-card-actions>
-    </mat-card>
-}
+<app-movie-card-list [movies]="this.movies()!"></app-movie-card-list>
 <h3 appScrollEnd (scrolledToEnd)="showMoreMovies()">Cargando más películas</h3>

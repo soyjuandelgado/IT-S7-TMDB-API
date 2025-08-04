@@ -8,6 +8,11 @@
     - [1. Listado de películas](#1-listado-de-películas)
     - [2. Detalles de la película](#2-detalles-de-la-película)
     - [3. Carga de más películas](#3-carga-de-más-películas)
+    - [4. Mejora del diseño](#4-mejora-del-diseño)
+      - [4.1 Listado de películas](#41-listado-de-películas)
+      - [4.2 Detalles de película](#42-detalles-de-película)
+        - [4.2.1 Detalles de película en dispositivos móviles](#421-detalles-de-película-en-dispositivos-móviles)
+        - [4.2.2 Detalles de película en pantalla grande](#422-detalles-de-película-en-pantalla-grande)
   - [💻Tecnologías Utilizadas](#tecnologías-utilizadas)
   - [📋Requisitos](#requisitos)
   - [🛠️Instalación](#️instalación)
@@ -59,6 +64,43 @@ Se puede acceder a los detalles de cada película
 - Carga automática de películas extra al llegar al final de la página.
 
 <img src="public/ex3.png" width="400" style="margin-top: 1rem; margin-bottom: 1rem;">
+
+### 4. Mejora del diseño
+
+- Separación en componentes de:
+  - Lista de películas.
+  - Lista de actores.
+  - Valoración película.
+- Mejora del menú.
+- Rediseño del listado de películas.
+- Rediseño de los detalles de la película.
+- Diseño responsive para pantallas grandes.
+
+#### 4.1 Listado de películas
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-top: 1rem;">
+  <img src="public/ex4.png" width="500" style="vertical-align: top;">
+  <img src="public/ex4-mobile.png" width="150" style="vertical-align: top;">
+</div>
+
+#### 4.2 Detalles de película
+
+##### 4.2.1 Detalles de película en dispositivos móviles
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-top: 1rem;">
+  <img src="public/ex4-movie-mobile.png" width="150" style="vertical-align: top;">
+  <img src="public/ex4-movie-cast-mobile.png" width="150" style="vertical-align: top;">
+  <img src="public/ex4-movie-similar-mobile.png" width="150" style="vertical-align: top;">
+  <img src="public/ex4-movie-recommended-mobile.png" width="150" style="vertical-align: top;">
+</div>
+
+##### 4.2.2 Detalles de película en pantalla grande
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-top: 1rem;">
+  <img src="public/ex4-movie.png" width="200" style="vertical-align: top;">
+  <img src="public/ex4-movie-similar.png" width="200" style="vertical-align: top;">
+  <img src="public/ex4-movie-recommended.png" width="200" style="vertical-align: top;">
+</div>
 
 ## 💻Tecnologías Utilizadas
 

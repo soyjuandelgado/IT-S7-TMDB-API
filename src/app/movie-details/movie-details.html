@@ -1,36 +1,33 @@
-<img src="{{imgPath}}{{movie()?.poster_path}}" alt="Portada de {{movie()?.title}}">
-<h1>{{movie()?.title}}</h1>
-<h2>{{movie()?.tagline}}</h2>
-<h3>{{((movie()?.vote_average || 0) * 10).toFixed(0)}}%</h3>
-<span>{{movie()?.release_date}}</span>
-<span>
-    @for (genre of movie()?.genres; track $index) {
-        @if ($index > 0) {,} {{genre.name}}
-    }
-</span>
-<span>{{movie()?.runtime}} minutos</span>
-<p>{{movie()?.overview}}</p>
+<section class="movie-info" >
+    <div class="movie-image-container">
+        <app-movie-average [value] = "movieAverage()"></app-movie-average>
+        <img class="movie-poster" src="{{imgPath}}{{movie()?.poster_path}}" alt="Portada de {{movie()?.title}}">
+    </div>
+    <div class="movie-text-container">
+        <h1 class="movie-title">{{movie()?.title}}</h1>
+        <h2 class="movie-tagline">{{movie()?.tagline}}</h2>
+        <div>
+            <span class="movie-date">{{movie()?.release_date | date:'dd-MM-yyyy'}}</span> · 
+            <span class="movie-runtime">{{movie()?.runtime}} minutos</span>
+        </div>
+        <p class="movie-genres">
+            @for (genre of movie()?.genres; track $index) {
+                @if ($index > 0) {-} {{genre.name}}
+            }
+        </p>
+        <p class="movie-overview">{{movie()?.overview}}</p>
+    </div>
+</section>
+<section class="cast">
+    <h2>REPARTO</h2>
+    <app-cast-card-list [cast]="movie()?.credits?.cast"></app-cast-card-list>
+</section>
+<section class="similar">
+    <h2>PELÍCULAS SIMILARES</h2>
+    <app-movie-card-list [movies]="this.movie()?.similar"></app-movie-card-list>
+</section>
+<section class="recommendations">
+    <h2>PELÍCULAS RECOMENDADAS</h2>
+    <app-movie-card-list [movies]="this.movie()?.recommendations"></app-movie-card-list>
+</section>
 
-<h2>Reparto</h2>
-<p>
-    @for (c of movie()?.credits?.cast; track $index) {
-        <button type="button">
-            <img src="{{imgPath}}{{c.profile_path}}" alt="Portada de {{c.name}}" width="100px">
-            <p><span>{{c.character}}</span><br>{{c.name}}</p>
-        </button>
-    }
-</p>
-
-<h2>Películas Similares</h2>
-    @for (s of movie()?.similar?.results; track $index) {
-        <button type="button" (click)="showMovieDetails(s.id)">
-            <img src="{{imgPath}}{{s.poster_path}}" alt="Portada de {{s.title}}" width="100px">
-        </button>
-    }
-
-<h2>Películas Recomendadas</h2>
-    @for (r of movie()?.recommendations?.results; track $index) {
-        <button type="button" (click)="showMovieDetails(r.id)">
-            <img src="{{imgPath}}{{r.poster_path}}" alt="Portada de {{r.title}}" width="100px">
-        </button>
-    }

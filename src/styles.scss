@@ -6,6 +6,14 @@
 // custom components at https://material.angular.dev/guide/theming
 @use '@angular/material' as mat;
 
+// @use '@angular/material' as mat;
+//TODO: extraer color spinner
+:root {
+  @include mat.progress-spinner-overrides((
+    active-indicator-color: #2dbbd0,
+  ));
+}
+
 html {
   @include mat.theme((
     color: (
@@ -25,9 +33,19 @@ html {
   // Angular Material's system-level CSS variables. Learn more about these
   // variables at https://material.angular.dev/guide/system-variables
   background-color: var(--mat-sys-surface);
-  color: var(--mat-sys-on-surface);
+  color: #032541; // var(--mat-sys-on-surface);
   font: var(--mat-sys-body-medium);
 }/* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+h1{ font-size: 2rem;}
+
+@media screen and (min-width:1200px) {
+  body {
+    margin: auto;
+    width: 1200px;
+  }
+}
+
+

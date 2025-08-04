@@ -1,10 +1,10 @@
 export interface IMovieCredits {
   id?: number
-  cast: Cast[]
-  crew: Crew[]
+  cast: ICast[]
+  crew: ICrew[]
 }
 
-export interface Cast {
+export interface ICast {
   adult: boolean
   gender: number
   id: number
@@ -19,7 +19,7 @@ export interface Cast {
   order: number
 }
 
-export interface Crew {
+export interface ICrew {
   adult: boolean
   gender: number
   id: number
