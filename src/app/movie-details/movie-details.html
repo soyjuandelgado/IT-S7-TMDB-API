@@ -1,22 +1,27 @@
-<img src="{{imgPath}}{{movie()?.poster_path}}" alt="Portada de {{movie()?.title}}" class="poster">
-<h1>{{movie()?.title}}</h1>
-<h2>{{movie()?.tagline}}</h2>
-<h3>{{((movie()?.vote_average || 0) * 10).toFixed(0)}}%</h3>
-<span>{{movie()?.release_date | date:'dd-MM-yyyy'}}</span>
-<span>
-    @for (genre of movie()?.genres; track $index) {
-        @if ($index > 0) {,} {{genre.name}}
-    }
-</span>
-<span>{{movie()?.runtime}} minutos</span>
-<p>{{movie()?.overview}}</p>
-
-<h2>Reparto</h2>
-<app-cast-card-list [cast]="movie()?.credits?.cast"></app-cast-card-list>
-
-<h2>Películas Similares</h2>
-<app-movie-card-list [movies]="this.movie()?.similar"></app-movie-card-list>
-
-<h2>Películas Recomendadas</h2>
-<app-movie-card-list [movies]="this.movie()?.recommendations"></app-movie-card-list>
+<section>
+    <img src="{{imgPath}}{{movie()?.poster_path}}" alt="Portada de {{movie()?.title}}" class="poster">
+    <h1>{{movie()?.title}}</h1>
+    <h2>{{movie()?.tagline}}</h2>
+    <h3>{{((movie()?.vote_average || 0) * 10).toFixed(0)}}%</h3>
+    <span>{{movie()?.release_date | date:'dd-MM-yyyy'}}</span>
+    <span>
+        @for (genre of movie()?.genres; track $index) {
+            @if ($index > 0) {,} {{genre.name}}
+        }
+    </span>
+    <span>{{movie()?.runtime}} minutos</span>
+    <p>{{movie()?.overview}}</p>
+</section>
+<section class="cast">
+    <h2>REPARTO</h2>
+    <app-cast-card-list [cast]="movie()?.credits?.cast"></app-cast-card-list>
+</section>
+<section class="similar">
+    <h2>PELÍCULAS SIMILARES</h2>
+    <app-movie-card-list [movies]="this.movie()?.similar"></app-movie-card-list>
+</section>
+<section class="recommendations">
+    <h2>PELÍCULAS RECOMENDADAS</h2>
+    <app-movie-card-list [movies]="this.movie()?.recommendations"></app-movie-card-list>
+</section>
 

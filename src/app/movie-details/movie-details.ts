@@ -8,10 +8,18 @@ import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MovieCardList } from '../movie-card-list/movie-card-list';
 import { CastCardList } from '../cast-card-list/cast-card-list';
+import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
   selector: 'app-movie-details',
-  imports: [DatePipe, MatCardModule, MatProgressSpinnerModule, MovieCardList, CastCardList],
+  imports: [
+    DatePipe,
+    MatCardModule,
+    MatProgressSpinnerModule,
+    MovieCardList,
+    CastCardList,
+    MatDividerModule,
+  ],
   templateUrl: './movie-details.html',
   styleUrl: './movie-details.scss',
 })
@@ -24,7 +32,7 @@ export class MovieDetails implements OnInit {
   route = inject(ActivatedRoute);
   router = inject(Router);
 
-  constructor(){
+  constructor() {
     effect(() => {
       this.loadMovieDetails(this.id());
     });
@@ -40,7 +48,7 @@ export class MovieDetails implements OnInit {
     this.api.getMovieDetailsAndSimilarRecommendationsCredits$(id).subscribe({
       next: (response) => {
         this.movie.set(response);
-        console.log(response)
+        console.log(response);
       },
       error: (err) => {
         console.error('Error al obtener película', err);
