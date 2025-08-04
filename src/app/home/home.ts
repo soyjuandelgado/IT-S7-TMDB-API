@@ -1,25 +1,18 @@
 import { Component, inject, signal, OnInit } from '@angular/core';
-import { environment } from '../../environments/environment';
 import { TMDBApiService } from '../shared/services/tmdb-api-service';
 import { IMovies } from '../shared/models/imovies';
-import { MatCardModule } from '@angular/material/card';
-import { Router } from '@angular/router';
 import { ScrollEnd } from '../shared/directives/scroll-end';
-import { DatePipe } from '@angular/common';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MovieCard } from '../movie-card/movie-card';
 
 @Component({
   selector: 'app-home',
-  imports: [MatCardModule, ScrollEnd, DatePipe, MatProgressSpinnerModule, MovieCard],
+  imports: [ScrollEnd, MovieCard],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
 export class Home implements OnInit {
   api = inject(TMDBApiService);
   movies = signal<IMovies | undefined>(undefined);
-  imgPath = environment.TMDB_IMG_PATH_500;
-  router = inject(Router);
 
   ngOnInit() {
     this.getMovies();
