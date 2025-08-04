@@ -7,10 +7,11 @@ import { Router } from '@angular/router';
 import { ScrollEnd } from '../shared/directives/scroll-end';
 import { DatePipe } from '@angular/common';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MovieCard } from '../movie-card/movie-card';
 
 @Component({
   selector: 'app-home',
-  imports: [MatCardModule, ScrollEnd, DatePipe, MatProgressSpinnerModule],
+  imports: [MatCardModule, ScrollEnd, DatePipe, MatProgressSpinnerModule, MovieCard],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })

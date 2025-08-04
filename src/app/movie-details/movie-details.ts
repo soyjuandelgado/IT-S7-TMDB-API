@@ -3,10 +3,13 @@ import { TMDBApiService } from '../shared/services/tmdb-api-service';
 import { IMovieDetails } from '../shared/models/imovie-details';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from '../../environments/environment';
+import { DatePipe } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'app-movie-details',
-  imports: [],
+  imports: [DatePipe, MatCardModule, MatProgressSpinnerModule],
   templateUrl: './movie-details.html',
   styleUrl: './movie-details.scss',
 })
@@ -35,6 +38,7 @@ export class MovieDetails implements OnInit {
     this.api.getMovieDetailsAndSimilarRecommendationsCredits$(id).subscribe({
       next: (response) => {
         this.movie.set(response);
+        console.log(response)
       },
       error: (err) => {
         console.error('Error al obtener película', err);
