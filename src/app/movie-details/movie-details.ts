@@ -6,10 +6,12 @@ import { environment } from '../../environments/environment';
 import { DatePipe } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MovieCardList } from '../movie-card-list/movie-card-list';
+import { CastCardList } from '../cast-card-list/cast-card-list';
 
 @Component({
   selector: 'app-movie-details',
-  imports: [DatePipe, MatCardModule, MatProgressSpinnerModule],
+  imports: [DatePipe, MatCardModule, MatProgressSpinnerModule, MovieCardList, CastCardList],
   templateUrl: './movie-details.html',
   styleUrl: './movie-details.scss',
 })

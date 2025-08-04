@@ -1,0 +1,15 @@
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 1rem;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 1000px) {
+  .card-list {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(150px, 1fr)
+    );
+  }
+}
