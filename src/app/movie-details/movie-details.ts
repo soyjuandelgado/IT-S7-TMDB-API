@@ -1,4 +1,4 @@
-import { Component, inject, signal, effect, OnInit } from '@angular/core';
+import { Component, inject, signal, effect, OnInit, computed } from '@angular/core';
 import { TMDBApiService } from '../shared/services/tmdb-api-service';
 import { IMovieDetails } from '../shared/models/imovie-details';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -9,6 +9,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MovieCardList } from '../movie-card-list/movie-card-list';
 import { CastCardList } from '../cast-card-list/cast-card-list';
 import { MatDividerModule } from '@angular/material/divider';
+import { MovieAverage } from '../movie-average/movie-average';
 
 @Component({
   selector: 'app-movie-details',
@@ -19,6 +20,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MovieCardList,
     CastCardList,
     MatDividerModule,
+    MovieAverage
   ],
   templateUrl: './movie-details.html',
   styleUrl: './movie-details.scss',
@@ -28,6 +30,9 @@ export class MovieDetails implements OnInit {
   id = signal(0);
   movie = signal<IMovieDetails | undefined>(undefined);
   imgPath = environment.TMDB_IMG_PATH_500;
+  movieAverage = computed(() =>
+    Math.round((this.movie()?.vote_average || 0) * 10)
+  );
 
   route = inject(ActivatedRoute);
   router = inject(Router);
