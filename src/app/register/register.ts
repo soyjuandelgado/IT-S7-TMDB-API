@@ -17,8 +17,10 @@ import { Router } from '@angular/router';
 export class Register {
   private userServ = inject(UserService);
   private router = inject(Router);
-  email = new FormControl('', [Validators.required]);
-  password = new FormControl('', [Validators.required]);
+  //TODO: comprobar email correcto
+  //TODO: mostrar error bajo el input
+  email = new FormControl('', [Validators.required, Validators.email]);
+  password = new FormControl('', [Validators.required, Validators.minLength(6)]);
   user = new FormGroup({
     email: this.email,
     password: this.password,

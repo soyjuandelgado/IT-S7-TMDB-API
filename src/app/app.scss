@@ -53,6 +53,9 @@ main {
 .app-button:active {
   background-color: #01b3e4;
 }
+.app-button:disabled {
+  background-color: grey;
+}
 
 .app-title {
   color: white;
@@ -77,6 +80,9 @@ main {
     border: 0;
     padding: 0.5rem;
     width: 100%;
+}
+.app-input-invalid{
+  border: 3px solid red;
 }
 
 

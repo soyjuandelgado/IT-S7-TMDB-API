@@ -1,8 +1,8 @@
 <div class="container">
     <h1 class="register-title">Registro</h1>
     <form class="register-form" [formGroup]="user">
-        <input type="email" placeholder="Email" class="register-input" [formControl]="email">
-        <input type="password" placeholder="Contraseña" class="register-input" [formControl]="password">
-        <button type="button" class="register-button" (click)="registerUser()">REGISTRARSE</button>
+        <input type="email" placeholder="Email" class="register-input" [formControl]="email"  [formControl]="email" [class.app-input-invalid] = "email.invalid && (email.touched && email.dirty)">
+        <input type="password" placeholder="Contraseña" class="register-input" [formControl]="password" [class.app-input-invalid] = "password.invalid && (password.touched && password.dirty)">
+        <button type="button" class="register-button" (click)="registerUser()" [disabled]="email.invalid || password.invalid">REGISTRARSE</button>
     </form>
 </div>

@@ -1,5 +1,12 @@
 @use "../app.scss";
 
+hr {
+   width: 100%;
+   border: 1px solid white;
+}
+label{
+  color: white;
+}
 .container {
   @extend .app-container;
   justify-content: center;
