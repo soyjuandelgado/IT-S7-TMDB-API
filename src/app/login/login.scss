@@ -1,0 +1,20 @@
+@use "../../styles.scss";
+
+.container {
+  @extend .app-container;
+  justify-content: center;
+}
+.login-title {
+  @extend .app-title;
+  padding-bottom: 2rem;
+}
+.login-form {
+  @extend .app-form;
+}
+.login-input {
+  @extend .app-input;
+}
+.login-button {
+  @extend .app-button;
+  margin-top: 1rem;
+}

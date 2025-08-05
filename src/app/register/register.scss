@@ -1,0 +1,20 @@
+@use "../../styles.scss";
+
+.container {
+  @extend .app-container;
+  justify-content: center;
+}
+.register-title {
+  @extend .app-title;
+  padding-bottom: 2rem;
+}
+.register-form {
+  @extend .app-form;
+}
+.register-input {
+  @extend .app-input;
+}
+.register-button {
+  @extend .app-button;
+  margin-top: 1rem;
+}

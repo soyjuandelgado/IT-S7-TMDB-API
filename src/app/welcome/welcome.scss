@@ -1,33 +1,11 @@
+@use '../../styles.scss';
 .container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #032541;
-    height: 92vh;
-    width: 100%;
-    border-radius: 1rem;
+    @extend .app-container;
 }
 .tmdb-logo{
     width: 30%;
     min-width: 15rem;
 }
 .welcome-button{
-    width: 30%;
-    min-width: 15rem;
-    min-height: 3rem;
-    border-radius: 1rem;
-    border: 0;
-    background-color: #8dcda2;
-    color: #032541;
-    font-size: 1.5rem;
-    font-weight:600;
-    letter-spacing: 0.1rem;
-    cursor: pointer;
-}
-.welcome-button:hover{
-    background-color: #5ec4b9;
-}
-.welcome-button:active{
-    background-color: #01b3e4;
+    @extend .app-button;
 }

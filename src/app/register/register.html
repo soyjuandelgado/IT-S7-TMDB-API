@@ -1,0 +1,8 @@
+<div class="container">
+    <h1 class="register-title">Registro</h1>
+    <form class="register-form" [formGroup]="user">
+        <input type="email" placeholder="Email" class="register-input" [formControl]="email">
+        <input type="password" placeholder="Contraseña" class="register-input" [formControl]="password">
+        <button type="button" class="register-button">REGISTRARSE</button>
+    </form>
+</div>
