@@ -1,20 +1,16 @@
-import { Component, inject} from '@angular/core';
+import { Component} from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { Router, RouterOutlet } from '@angular/router';
+import { RouterModule} from '@angular/router';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MatToolbarModule, MatIconModule, MatButtonModule],
+  imports: [MatToolbarModule, MatIconModule, MatButtonModule, RouterModule],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
 export class App {
   protected title = 'IT-S7-TMDB-API';
-  router = inject(Router);
 
-  navigateHome(){
-    this.router.navigate(['']);
-  }
 }
 

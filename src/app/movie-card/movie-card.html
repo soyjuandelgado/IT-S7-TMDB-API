@@ -1,4 +1,4 @@
-<mat-card class="card" appearance="outlined" (click)="showMovieDetails(movie()!.id)">
+<mat-card class="card" appearance="outlined" [routerLink]="['/movie']" [queryParams]="{ id: movie()!.id }">
     <img mat-card-image src="{{imgPath}}{{movie()!.poster_path}}" alt="poster de {{movie()!.title}}">
     <app-movie-average [value] = "movieAverage()"></app-movie-average>
     <mat-card-title-group class="card-title-group">

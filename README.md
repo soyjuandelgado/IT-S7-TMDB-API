@@ -13,6 +13,7 @@
       - [4.2 Detalles de película](#42-detalles-de-película)
         - [4.2.1 Detalles de película en dispositivos móviles](#421-detalles-de-película-en-dispositivos-móviles)
         - [4.2.2 Detalles de película en pantalla grande](#422-detalles-de-película-en-pantalla-grande)
+    - [5. Añadir página de bienvenida](#5-añadir-página-de-bienvenida)
   - [💻Tecnologías Utilizadas](#tecnologías-utilizadas)
   - [📋Requisitos](#requisitos)
   - [🛠️Instalación](#️instalación)
@@ -100,6 +101,17 @@ Se puede acceder a los detalles de cada película
   <img src="public/ex4-movie.png" width="200" style="vertical-align: top;">
   <img src="public/ex4-movie-similar.png" width="200" style="vertical-align: top;">
   <img src="public/ex4-movie-recommended.png" width="200" style="vertical-align: top;">
+</div>
+
+### 5. Añadir página de bienvenida
+
+- Nuevo componente `Welcome` con la página inicial.
+- Modificado archivo de rutas.
+- Se han sustituido las funciones que llaman a `router.navigate` por enlaces `routerLink`.
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-top: 1rem;">
+  <img src="public/ex5.png" width="500" style="vertical-align: top;">
+  <img src="public/ex5-mobile.png" width="150" style="vertical-align: top;">
 </div>
 
 ## 💻Tecnologías Utilizadas
