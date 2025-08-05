@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "IT-S7-TMDB-API": {
+    "it-s7-tmdb-api": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
