@@ -3,7 +3,7 @@
     <form class="login-form" [formGroup]="user">
         <input type="email" placeholder="Email" class="login-input" [formControl]="email">
         <input type="password" placeholder="Contraseña" class="login-input" [formControl]="password">
-        <button type="button" class="login-button">ENTRAR</button>
+        <button type="button" class="login-button" (click)="logInUser()">ENTRAR</button>
         <hr width="100%">
         <button type="button" class="login-button" routerLink="/register">REGISTRARSE</button>
     </form>
