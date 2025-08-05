@@ -67,10 +67,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "IT-S7-TMDB-API:build:production"
+              "buildTarget": "it-s7-tmdb-api:build:production"
             },
             "development": {
-              "buildTarget": "IT-S7-TMDB-API:build:development"
+              "buildTarget": "it-s7-tmdb-api:build:development"
             }
           },
           "defaultConfiguration": "development"
