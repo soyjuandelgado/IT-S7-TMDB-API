@@ -14,6 +14,7 @@
         - [4.2.1 Detalles de película en dispositivos móviles](#421-detalles-de-película-en-dispositivos-móviles)
         - [4.2.2 Detalles de película en pantalla grande](#422-detalles-de-película-en-pantalla-grande)
     - [5. Añadir página de bienvenida](#5-añadir-página-de-bienvenida)
+    - [6. Login y registro](#6-login-y-registro)
   - [💻Tecnologías Utilizadas](#tecnologías-utilizadas)
   - [📋Requisitos](#requisitos)
   - [🛠️Instalación](#️instalación)
@@ -114,6 +115,23 @@ Se puede acceder a los detalles de cada película
   <img src="public/ex5-mobile.png" width="150" style="vertical-align: top;">
 </div>
 
+### 6. Login y registro
+
+- Instalación y puesta en marcha de Firebase.
+- Nuevo servicio `UserService` para la gestion de autenticación.
+- Añadidas pantallas de:
+  - Login.
+  - Registro.
+- Gestión de rutas al entrar en el sistema.
+- Cambio de icono de usuario en menú por icono de perfil.
+- Detección de login realizado para permitir el logout.
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-top: 1rem;">
+  <img src="public/ex6-login.png" width="200" style="vertical-align: top;">
+  <img src="public/ex6-register.png" width="200" style="vertical-align: top;">
+  <img src="public/ex6-logout.png" width="200" style="vertical-align: top;">
+</div>
+
 ## 💻Tecnologías Utilizadas
 
 PENDIENTE
@@ -125,6 +143,7 @@ PENDIENTE
 - Eslint
 - Karma / Jasmine
 - Angular Material
+- Firebase
 
 ## 📋Requisitos
 
