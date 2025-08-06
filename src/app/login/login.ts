@@ -16,11 +16,17 @@ import { UserService } from '../shared/user-service';
 })
 export class Login {
   private userServ = inject(UserService);
+  credentials = this.userServ.credentials;
   private router = inject(Router);
-  //TODO: comprobar email correcto
   //TODO: mostrar error bajo el input
-  email = new FormControl('', [Validators.required, Validators.email]);
-  password = new FormControl('', [Validators.required, Validators.minLength(6)]);
+  email = new FormControl('', [
+    Validators.required,
+    Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/),
+  ]);
+  password = new FormControl('', [
+    Validators.required,
+    Validators.minLength(6),
+  ]);
   user = new FormGroup({
     email: this.email,
     password: this.password,
@@ -33,6 +39,18 @@ export class Login {
         console.log(response);
         this.router.navigate(['/home']);
       })
-      .catch((error) => console.error(error));
+      .catch((error: Error) => {
+        //TODO: mostrar mensaje de error
+        alert(error.message);
+      });
+  }
+  logOutUser() {
+    this.userServ.logOut().then(response =>{
+        console.log(response);
+        this.router.navigate(['']);
+    }).catch((error: Error) => {
+        //TODO: mostrar mensaje de error
+        alert(error.message);
+    })
   }
 }

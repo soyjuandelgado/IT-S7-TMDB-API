@@ -17,23 +17,31 @@ import { Router } from '@angular/router';
 export class Register {
   private userServ = inject(UserService);
   private router = inject(Router);
-  //TODO: comprobar email correcto
   //TODO: mostrar error bajo el input
-  email = new FormControl('', [Validators.required, Validators.email]);
-  password = new FormControl('', [Validators.required, Validators.minLength(6)]);
+  email = new FormControl('', [
+    Validators.required,
+    Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/),
+  ]);
+  password = new FormControl('', [
+    Validators.required,
+    Validators.minLength(6),
+  ]);
   user = new FormGroup({
     email: this.email,
     password: this.password,
   });
 
   registerUser() {
-    console.log(this.user)
+    console.log(this.user);
     this.userServ
       .register(this.email.value!, this.password.value!)
       .then((response) => {
         console.log(response);
         this.router.navigate(['/home']);
       })
-      .catch((error) => console.error(error));
+      //TODO: mostrar mensaje de error
+      .catch((error: Error) => {
+        alert(error.message);
+      });
   }
 }

@@ -4,8 +4,10 @@ hr {
    width: 100%;
    border: 1px solid white;
 }
-label{
+h2{
   color: white;
+  font-weight: 300;
+  line-height: 2rem;
 }
 .container {
   @extend .app-container;

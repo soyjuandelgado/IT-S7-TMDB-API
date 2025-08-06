@@ -7,7 +7,11 @@
     <mat-icon class="icon-button" routerLink="/home">home</mat-icon>
   </button>
   <button matIconButton class="" aria-label="Icon-button with person icon">
-    <mat-icon class="icon-button" routerLink="/login">person</mat-icon>
+     @if (credentials()){
+      <mat-icon class="icon-button" routerLink="/login">account_box</mat-icon>
+     } @else {
+       <mat-icon class="icon-button" routerLink="/login">person</mat-icon>
+     }
   </button>
 </mat-toolbar>
 
