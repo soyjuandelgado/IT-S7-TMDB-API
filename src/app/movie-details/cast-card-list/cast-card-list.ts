@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { ICast } from '../shared/models/imovie-credits';
+import { ICast } from '../../shared/models/imovie-credits';
 import { CastCard } from '../cast-card/cast-card';
 
 @Component({

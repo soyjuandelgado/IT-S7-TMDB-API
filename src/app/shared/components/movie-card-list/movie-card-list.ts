@@ -1,6 +1,6 @@
 import { Component, input } from '@angular/core';
 import { MovieCard } from '../movie-card/movie-card';
-import { IMovies } from '../shared/models/imovies';
+import { IMovies } from '../../models/imovies';
 
 @Component({
   selector: 'app-movie-card-list',

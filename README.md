@@ -15,6 +15,7 @@
         - [4.2.2 Detalles de película en pantalla grande](#422-detalles-de-película-en-pantalla-grande)
     - [5. Añadir página de bienvenida](#5-añadir-página-de-bienvenida)
     - [6. Login y registro](#6-login-y-registro)
+    - [7. Rutas protegidas](#7-rutas-protegidas)
   - [💻Tecnologías Utilizadas](#tecnologías-utilizadas)
   - [📋Requisitos](#requisitos)
   - [🛠️Instalación](#️instalación)
@@ -131,6 +132,17 @@ Se puede acceder a los detalles de cada película
   <img src="public/ex6-register.png" width="200" style="vertical-align: top;">
   <img src="public/ex6-logout.png" width="200" style="vertical-align: top;">
 </div>
+
+### 7. Rutas protegidas
+
+- Modificado el login para poder hacerlo desde Google.
+- Añadido `auth-guard`: Redirige a `/login` y guarda la ruta anterior.
+- Modificado `login` para que navegue a la ruta anterior.
+- Modificado `auth-guard` para que compruebe el login directamente de Firebase, evitando navegación errónea.
+- Nueva función `isLoggedIn` en `user-service`.
+- Las rutas incorrectas llevan a la pantalla inicial.
+
+<img src="public/ex7.png" width="200" style="margin-top: 1rem; margin-bottom: 1rem;">
 
 ## 💻Tecnologías Utilizadas
 

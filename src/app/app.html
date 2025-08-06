@@ -7,7 +7,7 @@
     <mat-icon class="icon-button" routerLink="/home">home</mat-icon>
   </button>
   <button matIconButton class="" aria-label="Icon-button with person icon">
-     @if (credentials()){
+     @if (loggedIn()){
       <mat-icon class="icon-button" routerLink="/login">account_box</mat-icon>
      } @else {
        <mat-icon class="icon-button" routerLink="/login">person</mat-icon>

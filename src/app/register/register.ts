@@ -5,7 +5,7 @@ import {
   FormGroup,
   ReactiveFormsModule,
 } from '@angular/forms';
-import { UserService } from '../shared/user-service';
+import { UserService } from '../shared/services/user-service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -35,8 +35,7 @@ export class Register {
     console.log(this.user);
     this.userServ
       .register(this.email.value!, this.password.value!)
-      .then((response) => {
-        console.log(response);
+      .then(() => {
         this.router.navigate(['/home']);
       })
       //TODO: mostrar mensaje de error

@@ -6,10 +6,10 @@ import { environment } from '../../environments/environment';
 import { DatePipe } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MovieCardList } from '../movie-card-list/movie-card-list';
-import { CastCardList } from '../cast-card-list/cast-card-list';
+import { MovieCardList } from '../shared/components/movie-card-list/movie-card-list';
+import { CastCardList } from './cast-card-list/cast-card-list';
 import { MatDividerModule } from '@angular/material/divider';
-import { MovieAverage } from '../movie-average/movie-average';
+import { MovieAverage } from '../shared/components/movie-average/movie-average';
 
 @Component({
   selector: 'app-movie-details',

@@ -2,7 +2,7 @@ import { Component, inject, signal, OnInit } from '@angular/core';
 import { TMDBApiService } from '../shared/services/tmdb-api-service';
 import { IMovies } from '../shared/models/imovies';
 import { ScrollEnd } from '../shared/directives/scroll-end';
-import { MovieCardList } from '../movie-card-list/movie-card-list';
+import { MovieCardList } from '../shared/components/movie-card-list/movie-card-list';
 
 
 @Component({
