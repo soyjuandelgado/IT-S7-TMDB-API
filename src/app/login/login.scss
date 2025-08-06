@@ -1,0 +1,29 @@
+@use "../app.scss";
+
+hr {
+   width: 100%;
+   border: 1px solid white;
+}
+h2{
+  color: white;
+  font-weight: 300;
+  line-height: 2rem;
+}
+.container {
+  @extend .app-container;
+  justify-content: center;
+}
+.login-title {
+  @extend .app-title;
+  padding-bottom: 2rem;
+}
+.login-form {
+  @extend .app-form;
+}
+.login-input {
+  @extend .app-input;
+}
+.login-button {
+  @extend .app-button;
+  margin-top: 1rem;
+}

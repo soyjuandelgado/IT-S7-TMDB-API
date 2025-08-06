@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "IT-S7-TMDB-API": {
+    "it-s7-tmdb-api": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -67,10 +67,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "IT-S7-TMDB-API:build:production"
+              "buildTarget": "it-s7-tmdb-api:build:production"
             },
             "development": {
-              "buildTarget": "IT-S7-TMDB-API:build:development"
+              "buildTarget": "it-s7-tmdb-api:build:development"
             }
           },
           "defaultConfiguration": "development"

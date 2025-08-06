@@ -1,28 +1,31 @@
-
 // Include theming for Angular Material with `mat.theme()`.
 // This Sass mixin will define CSS variables that are used for styling Angular Material
 // components according to the Material 3 design spec.
 // Learn more about theming and how to use it for your application's
 // custom components at https://material.angular.dev/guide/theming
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 
 // @use '@angular/material' as mat;
 //TODO: extraer color spinner
 :root {
-  @include mat.progress-spinner-overrides((
-    active-indicator-color: #2dbbd0,
-  ));
+  @include mat.progress-spinner-overrides(
+    (
+      active-indicator-color: #2dbbd0,
+    )
+  );
 }
 
 html {
-  @include mat.theme((
-    color: (
-      primary: mat.$azure-palette,
-      tertiary: mat.$blue-palette,
-    ),
-    typography: Roboto,
-    density: 0,
-  ));
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
 
   // Default the application to a light color theme. This can be changed to
   // `dark` to enable the dark color theme, or to `light dark` to defer to the
@@ -35,17 +38,23 @@ html {
   background-color: var(--mat-sys-surface);
   color: #032541; // var(--mat-sys-on-surface);
   font: var(--mat-sys-body-medium);
-}/* You can add global styles to this file, and also import other style files */
+} /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-h1{ font-size: 2rem;}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+h1 {
+  font-size: 2rem;
+}
 
-@media screen and (min-width:1200px) {
+@media screen and (min-width: 1200px) {
   body {
     margin: auto;
     width: 1200px;
   }
 }
-
-
