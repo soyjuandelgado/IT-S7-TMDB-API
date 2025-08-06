@@ -13,6 +13,6 @@ import { UserService } from './shared/user-service';
 export class App {
   protected title = 'IT-S7-TMDB-API';
   private userServ = inject(UserService);
-  credentials = this.userServ.credentials;
+  loggedIn = this.userServ.isLoggedIn;
 }
 

@@ -8,10 +8,11 @@ import {
   Auth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  UserCredential,
   signOut,
   signInWithPopup,
   GoogleAuthProvider,
+  onAuthStateChanged,
+  User,
 } from '@angular/fire/auth';
 
 @Injectable({
@@ -19,39 +20,33 @@ import {
 })
 export class UserService {
   private auth = inject(Auth);
-  credentials = signal<UserCredential | undefined>(undefined);
+  user = signal< User | null>(this.auth.currentUser)
+
+  constructor(){
+    onAuthStateChanged(this.auth, (user) =>{
+      this.user.set(user);
+    });
+  }
 
   register(email: string, password: string) {
     return createUserWithEmailAndPassword(this.auth, email, password).then(
       (response) => {
-        this.credentials.set(response);
         return response;
       }
     );
   }
 
   signIn(email: string, password: string) {
-    return signInWithEmailAndPassword(this.auth, email, password).then(
-      (response) => {
-        this.credentials.set(response);
-        return response;
-      }
-    );
+    return signInWithEmailAndPassword(this.auth, email, password);
   }
 
   loginWithGoogle() {
-    return signInWithPopup(this.auth, new GoogleAuthProvider()).then(
-      (response) => {
-        this.credentials.set(response);
-        return response;
-      }
-    );
+    return signInWithPopup(this.auth, new GoogleAuthProvider());
   }
 
   logOut() {
-    return signOut(this.auth).then((response) => {
-      this.credentials.set(undefined);
-      return response;
-    });
+    return signOut(this.auth);
   }
+
+  isLoggedIn = this.user.asReadonly();
 }

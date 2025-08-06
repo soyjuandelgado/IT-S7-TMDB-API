@@ -5,7 +5,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { UserService } from '../shared/user-service';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -17,8 +17,11 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class Login {
   private userServ = inject(UserService);
-  credentials = this.userServ.credentials;
+  loggedIn = this.userServ.isLoggedIn;
   private router = inject(Router);
+  private route = inject(ActivatedRoute);
+  returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/home';
+
   //TODO: mostrar error bajo el input
   email = new FormControl('', [
     Validators.required,
@@ -36,9 +39,8 @@ export class Login {
   logInUser() {
     this.userServ
       .signIn(this.email.value!, this.password.value!)
-      .then((response) => {
-        console.log(response);
-        this.router.navigate(['/home']);
+      .then(() => {
+        this.router.navigateByUrl(this.returnUrl);
       })
       .catch((error: Error) => {
         //TODO: mostrar mensaje de error
@@ -51,7 +53,7 @@ export class Login {
       .loginWithGoogle()
       .then((response) => {
         console.log(response);
-        this.router.navigate(['/home']);
+        this.router.navigateByUrl(this.returnUrl);
       })
       .catch((error: Error) => {
         //TODO: mostrar mensaje de error

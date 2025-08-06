@@ -1,7 +1,7 @@
 <div class="container">
     <h1 class="login-title">Login</h1>
     <form class="login-form" [formGroup]="user">
-        @if(credentials()){
+        @if(loggedIn()){
             <h2>Ya está identificado.</h2>
             <button type="button" class="login-button" (click)="logOutUser()">SALIR</button>
         }@else {

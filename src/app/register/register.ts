@@ -35,8 +35,7 @@ export class Register {
     console.log(this.user);
     this.userServ
       .register(this.email.value!, this.password.value!)
-      .then((response) => {
-        console.log(response);
+      .then(() => {
         this.router.navigate(['/home']);
       })
       //TODO: mostrar mensaje de error
