@@ -8,6 +8,8 @@
             <input type="email" name="email" placeholder="Email" class="login-input" [formControl]="email" [class.app-input-invalid] = "email.invalid && (email.touched && email.dirty)">
             <input type="password" placeholder="Contraseña" class="login-input" [formControl]="password" [class.app-input-invalid] = "password.invalid && (password.touched && password.dirty)">
             <button type="button" class="login-button" (click)="logInUser()" [disabled]="email.invalid || password.invalid">ENTRAR</button>
+            <hr>
+            <button type="button" class="login-button" (click)="logInUserGoogle()">USAR GOOGLE</button>
         }
         <hr>
         <button type="button" class="login-button" routerLink="/register">REGISTRARSE</button>

@@ -7,10 +7,11 @@ import {
 } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { UserService } from '../shared/user-service';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-login',
-  imports: [ReactiveFormsModule, RouterLink],
+  imports: [ReactiveFormsModule, RouterLink, MatIconModule],
   templateUrl: './login.html',
   styleUrl: './login.scss',
 })
@@ -44,13 +45,30 @@ export class Login {
         alert(error.message);
       });
   }
-  logOutUser() {
-    this.userServ.logOut().then(response =>{
+
+  logInUserGoogle() {
+    this.userServ
+      .loginWithGoogle()
+      .then((response) => {
         console.log(response);
-        this.router.navigate(['']);
-    }).catch((error: Error) => {
+        this.router.navigate(['/home']);
+      })
+      .catch((error: Error) => {
         //TODO: mostrar mensaje de error
         alert(error.message);
-    })
+      });
+  }
+
+  logOutUser() {
+    this.userServ
+      .logOut()
+      .then((response) => {
+        console.log(response);
+        this.router.navigate(['']);
+      })
+      .catch((error: Error) => {
+        //TODO: mostrar mensaje de error
+        alert(error.message);
+      });
   }
 }
