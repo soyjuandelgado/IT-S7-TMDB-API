@@ -5,7 +5,7 @@ import {
   FormGroup,
   ReactiveFormsModule,
 } from '@angular/forms';
-import { UserService } from '../shared/user-service';
+import { UserService } from '../shared/services/user-service';
 import { Router } from '@angular/router';
 
 @Component({

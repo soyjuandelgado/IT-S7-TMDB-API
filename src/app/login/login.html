@@ -10,8 +10,8 @@
             <button type="button" class="login-button" (click)="logInUser()" [disabled]="email.invalid || password.invalid">ENTRAR</button>
             <hr>
             <button type="button" class="login-button" (click)="logInUserGoogle()">USAR GOOGLE</button>
+            <hr>
+            <button type="button" class="login-button" routerLink="/register">REGISTRARSE</button>
         }
-        <hr>
-        <button type="button" class="login-button" routerLink="/register">REGISTRARSE</button>
     </form>
 </div>

@@ -1,6 +1,6 @@
 import { Component, input } from '@angular/core';
-import { ICast } from '../shared/models/imovie-credits';
-import { environment } from '../../environments/environment';
+import { ICast } from '../../shared/models/imovie-credits';
+import { environment } from '../../../environments/environment';
 import { MatCardModule } from '@angular/material/card';
 
 @Component({

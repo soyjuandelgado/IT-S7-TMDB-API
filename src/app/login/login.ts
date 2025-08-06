@@ -6,7 +6,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { UserService } from '../shared/user-service';
+import { UserService } from '../shared/services/user-service';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
