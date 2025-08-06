@@ -9,6 +9,11 @@ import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 export const routes: Routes = [
   {
     path: '',
+    pathMatch: 'full',
+    redirectTo: '/welcome',
+  },
+  {
+    path: 'welcome',
     component: Welcome,
   },
   {
