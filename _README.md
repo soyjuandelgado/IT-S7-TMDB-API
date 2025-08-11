@@ -1,1 +1,0 @@
-# IT-S7-TMDB-API

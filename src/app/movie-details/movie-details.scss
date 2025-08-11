@@ -1,0 +1,84 @@
+@use "../../theme.scss" as custom-theme;
+section {
+  padding-bottom: 1rem;
+}
+.movie-info{
+  display: flex;
+  flex-direction: column;
+}
+.movie-image-container{
+  position: relative;
+}
+.movie-text-container{
+  display: flex;
+  flex-direction: column;
+}
+//TODO: modificar movie-average para pasarle los valores de tamaño
+app-movie-average{
+  position: absolute;
+  top: 70px;
+  right: 10px;
+}
+.movie-poster {
+  border-radius: 1rem;
+  width: 100%;
+}
+.movie-title {
+  display: block;
+  line-height: 2rem;
+  margin-bottom: 0;
+}
+.movie-tagline {
+  display: block;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 2rem;
+}
+.movie-date,
+.movie-genres,
+.movie-runtime {
+  font-weight: 500;
+}
+.movie-overview {
+  text-align: justify;
+}
+.section-title {
+  display: block;
+  padding: 1rem;
+  letter-spacing: 0.15rem;
+  text-align: center;
+  border-radius: 1rem;
+}
+.cast h2 {
+  @extend .section-title;
+  background-color: custom-theme.$background-title1;
+}
+.similar h2 {
+  @extend .section-title;
+  background-color: custom-theme.$background-title2;
+}
+.recommendations h2 {
+  @extend .section-title;
+  background-color: custom-theme.$background-title3;
+}
+
+@media screen and (min-width: 700px) {
+  .movie-info{
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .movie-image-container{
+    width: 33%;
+  }
+  .movie-text-container{
+    width: 67%;
+  }
+
+  .movie-date,
+  .movie-genres,
+  .movie-runtime,
+  .movie-overview {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+}

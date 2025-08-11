@@ -1,0 +1,11 @@
+<mat-card class="card" appearance="outlined">
+    @if(!cast()!.profile_path){
+        <img src="/no-photo.svg" alt="Portada de {{cast()!.name}}" width="100px">
+    }@else{
+        <img mat-card-image src="{{imgPath}}{{cast()!.profile_path}}" alt="Portada de {{cast()!.name}}">
+    }
+    <mat-card-title-group class="card-title-group">
+        <mat-card-subtitle class="card-subtitle">{{cast()!.character}}</mat-card-subtitle>
+        <mat-card-subtitle class="card-subtitle">{{cast()!.name}}</mat-card-subtitle>
+    </mat-card-title-group> 
+</mat-card>

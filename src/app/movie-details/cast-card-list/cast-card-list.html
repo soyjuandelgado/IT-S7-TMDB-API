@@ -1,0 +1,5 @@
+<section class="card-list">
+    @for (c of this.cast()!; track $index) {
+        <app-cast-card [cast] = c></app-cast-card>
+    }
+</section>

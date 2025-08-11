@@ -1,0 +1,88 @@
+@use "../theme.scss" as custom-theme;
+main {
+  padding: 2rem;
+  padding-top: 5rem;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: custom-theme.$background-color;
+}
+.logo{
+  //width: 35%;
+  height: 1.5rem;
+  cursor: pointer;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+.icon-button {
+  color: custom-theme.$font-color-light;
+}
+
+.app-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: custom-theme.$background-color;
+    height: 92vh;
+    width: 100%;
+    border-radius: 1rem;
+}
+.app-button {
+  width: 30%;
+  min-width: 15rem;
+  min-height: 3rem;
+  border-radius: 1rem;
+  border: 0;
+  background-color: custom-theme.$button-background-color;
+  color: custom-theme.$font-color-dark;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+}
+.app-button:hover {
+  background-color: custom-theme.$button-background-color-hover;
+}
+.app-button:active {
+  background-color: custom-theme.$buttton-background-color-active;
+}
+.app-button:disabled {
+  background-color: custom-theme.$button-background-color-inactive;
+}
+
+.app-title {
+  color: custom-theme.$font-color-light;
+  line-height: 2rem;
+  letter-spacing: 0.2rem;
+}
+
+.app-form{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 15rem;
+    gap: 1.5rem;
+}
+.app-input{
+    min-width: 15rem;
+    min-height: 2rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    border: 0;
+    padding: 0.5rem;
+    width: 100%;
+}
+.app-input-invalid{
+  border: 3px solid custom-theme.$border-color-error;
+}
+
+

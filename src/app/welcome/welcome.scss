@@ -1,0 +1,12 @@
+@use "../app.scss";
+
+.container{
+    @extend .app-container;
+}
+.tmdb-logo{
+    width: 30%;
+    min-width: 15rem;
+}
+.welcome-button{
+    @extend .app-button;
+}
