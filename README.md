@@ -27,8 +27,6 @@
 
 ## 📄Descripción
 
-PENDIENTE
-
 Web donde se visualizan las películas últimas películas en cartelera, nutriéndose de la API de TMDB.
 Se puede acceder a los detalles de cada película
 
