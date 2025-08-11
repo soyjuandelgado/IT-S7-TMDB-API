@@ -17,11 +17,16 @@
     - [6. Login y registro](#6-login-y-registro)
     - [7. Rutas protegidas](#7-rutas-protegidas)
     - [8. Mostrar actores](#8-mostrar-actores)
+    - [9. Mostrar películas relacionadas](#9-mostrar-películas-relacionadas)
   - [💻Tecnologías Utilizadas](#tecnologías-utilizadas)
   - [📋Requisitos](#requisitos)
   - [🛠️Instalación](#️instalación)
     - [1. Descargar el repositorio](#1-descargar-el-repositorio)
     - [2. Instalación de paquetes Node.js](#2-instalación-de-paquetes-nodejs)
+    - [3. Instalación de Angular](#3-instalación-de-angular)
+    - [4. Instalación de Angular Material](#4-instalación-de-angular-material)
+    - [5. Instalación de Firebase](#5-instalación-de-firebase)
+      - [5.1 Instalar Firebase en el proyecto](#51-instalar-firebase-en-el-proyecto)
   - [▶️Ejecución](#️ejecución)
     - [Testing](#testing)
   - [📸 Demo](#-demo)
@@ -145,9 +150,13 @@ Se puede acceder a los detalles de cada película
 
 ### 8. Mostrar actores
 
-- Realizado en ejeracicios anteriores.
+- Realizado en ejercicios anteriores.
 - Se ha añadido el nombre del personaje en `cast-card`.
 - Se han unificado los colores dentro de `theme.scss`.
+
+### 9. Mostrar películas relacionadas
+
+- Realizado en ejercicios anteriores. Se muestran las películas recomendadas y similares.
 
 ## 💻Tecnologías Utilizadas
 
@@ -164,10 +173,10 @@ Se puede acceder a los detalles de cada película
 
 - Navegador web
 - Node.js
+- Angular
+- Firebase
   
 ## 🛠️Instalación
-
-PENDIENTE
 
 ### 1. Descargar el repositorio
 
@@ -179,6 +188,49 @@ git clone https://github.com/soyjuandelgado/IT-S7-TMDB-API.git destino
 
 ```shell
 npm install
+```
+
+### 3. Instalación de Angular
+
+```shell
+npm install -g @angular/cli
+```
+
+### 4. Instalación de Angular Material
+
+```shell
+ng add @angular/material
+```
+
+### 5. Instalación de Firebase
+
+```shell
+npm install -g firebase-tools
+```
+
+Hacer login en firebase:
+
+```bash
+firebase login
+```
+
+#### 5.1 Instalar Firebase en el proyecto
+
+```bash
+ng add @angular/fire
+```
+
+Si da errores, se puede forzar la instalación
+
+```bash
+npm install @angular/fire --legacy-peer-deps
+```
+
+Si continúa fallando actualizar el sistema:
+
+```bash
+npm install -g @angular/cli@latest
+ng update @angular/cli @angular/core
 ```
 
 ## ▶️Ejecución
