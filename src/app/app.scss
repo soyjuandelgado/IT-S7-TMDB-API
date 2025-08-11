@@ -1,16 +1,16 @@
+@use "../theme.scss" as custom-theme;
 main {
   padding: 2rem;
   padding-top: 5rem;
 }
 
-//TODO: extraer color fondo menu
 .menu {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: #032541;
+  background-color: custom-theme.$background-color;
 }
 .logo{
   //width: 35%;
@@ -21,7 +21,7 @@ main {
   flex: 1 1 auto;
 }
 .icon-button {
-  color: white;
+  color: custom-theme.$font-color-light;
 }
 
 .app-container{
@@ -29,7 +29,7 @@ main {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: #032541;
+    background-color: custom-theme.$background-color;
     height: 92vh;
     width: 100%;
     border-radius: 1rem;
@@ -40,25 +40,25 @@ main {
   min-height: 3rem;
   border-radius: 1rem;
   border: 0;
-  background-color: #8dcda2;
-  color: #032541;
+  background-color: custom-theme.$button-background-color;
+  color: custom-theme.$font-color-dark;
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 0.1rem;
   cursor: pointer;
 }
 .app-button:hover {
-  background-color: #5ec4b9;
+  background-color: custom-theme.$button-background-color-hover;
 }
 .app-button:active {
-  background-color: #01b3e4;
+  background-color: custom-theme.$buttton-background-color-active;
 }
 .app-button:disabled {
-  background-color: grey;
+  background-color: custom-theme.$button-background-color-inactive;
 }
 
 .app-title {
-  color: white;
+  color: custom-theme.$font-color-light;
   line-height: 2rem;
   letter-spacing: 0.2rem;
 }
@@ -82,7 +82,7 @@ main {
     width: 100%;
 }
 .app-input-invalid{
-  border: 3px solid red;
+  border: 3px solid custom-theme.$border-color-error;
 }
 
 

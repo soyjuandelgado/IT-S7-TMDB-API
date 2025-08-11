@@ -1,3 +1,4 @@
+@use "../../theme.scss" as custom-theme;
 section {
   padding-bottom: 1rem;
 }
@@ -50,15 +51,15 @@ app-movie-average{
 }
 .cast h2 {
   @extend .section-title;
-  background-color: #01b3e4;
+  background-color: custom-theme.$background-title1;
 }
 .similar h2 {
   @extend .section-title;
-  background-color: #5ec4b9;
+  background-color: custom-theme.$background-title2;
 }
 .recommendations h2 {
   @extend .section-title;
-  background-color: #8dcda2;
+  background-color: custom-theme.$background-title3;
 }
 
 @media screen and (min-width: 700px) {

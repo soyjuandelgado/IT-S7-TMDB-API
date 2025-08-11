@@ -1,11 +1,12 @@
 @use "../app.scss";
+@use "../../theme.scss" as custom-theme;
 
 hr {
    width: 100%;
-   border: 1px solid white;
+   border: 1px solid custom-theme.$border-color-light;
 }
 h2{
-  color: white;
+  color: custom-theme.$font-color-light;
   font-weight: 300;
   line-height: 2rem;
 }

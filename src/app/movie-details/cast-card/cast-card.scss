@@ -1,3 +1,4 @@
+@use "../../../theme.scss" as custom-theme;
 .card {
   cursor: pointer;
   display: flex;
@@ -25,9 +26,8 @@
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
-//TODO: extraer color hover
-.card-title:hover {
-  color: #01b4e4;
+.card-subtitle:hover {
+  color: custom-theme.$card-title-color-hover;
 }
 
 @media screen and (min-width: 1000px) {

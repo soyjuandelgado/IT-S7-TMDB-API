@@ -1,3 +1,4 @@
+@use "../../../../theme.scss" as custom-theme;
 .card {
   cursor: pointer;
   display: flex;
@@ -27,7 +28,7 @@
 }
 //TODO: extraer color hover
 .card-title:hover {
-  color: #01b4e4;
+  color: custom-theme.$card-title-color-hover;
 }
 .card-subtitle {
   text-overflow: ellipsis;
