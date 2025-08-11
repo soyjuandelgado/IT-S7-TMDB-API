@@ -16,6 +16,7 @@
     - [5. Añadir página de bienvenida](#5-añadir-página-de-bienvenida)
     - [6. Login y registro](#6-login-y-registro)
     - [7. Rutas protegidas](#7-rutas-protegidas)
+    - [8. Mostrar actores](#8-mostrar-actores)
   - [💻Tecnologías Utilizadas](#tecnologías-utilizadas)
   - [📋Requisitos](#requisitos)
   - [🛠️Instalación](#️instalación)
@@ -26,8 +27,6 @@
   - [📸 Demo](#-demo)
 
 ## 📄Descripción
-
-PENDIENTE
 
 Web donde se visualizan las películas últimas películas en cartelera, nutriéndose de la API de TMDB.
 Se puede acceder a los detalles de cada película
@@ -144,9 +143,13 @@ Se puede acceder a los detalles de cada película
 
 <img src="public/ex7.png" width="200" style="margin-top: 1rem; margin-bottom: 1rem;">
 
-## 💻Tecnologías Utilizadas
+### 8. Mostrar actores
 
-PENDIENTE
+- Realizado en ejeracicios anteriores.
+- Se ha añadido el nombre del personaje en `cast-card`.
+- Se han unificado los colores dentro de `theme.scss`.
+
+## 💻Tecnologías Utilizadas
 
 - HTML
 - SASS
@@ -158,8 +161,6 @@ PENDIENTE
 - Firebase
 
 ## 📋Requisitos
-
-PENDIENTE 
 
 - Navegador web
 - Node.js

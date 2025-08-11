@@ -7,7 +7,6 @@ import { Register } from './register/register';
 // import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { authGuard } from './shared/auth/auth-guard';
 
-//TODO: redireccion después del login a la url original
 export const routes: Routes = [
   {
     path: '',

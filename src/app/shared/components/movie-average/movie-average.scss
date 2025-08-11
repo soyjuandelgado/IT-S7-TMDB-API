@@ -1,13 +1,14 @@
-//TODO: extraer color fondo circulo
+@use "../../../../theme.scss" as custom-theme;
 .movie-average-circle {
   position: absolute;
   bottom: 10px;
   right: 10px;
   width: 40px;
   height: 40px;
-  background-color: rgb(3, 37, 65, 0.85); //#032541;
+  // background-color: rgb(3, 37, 65, 0.85); //#032541;
+  background-color: rgba(custom-theme.$background-color, 0.85);
 
-  color: white;
+  color: custom-theme.$font-color-light;
   border-radius: 50%;
   display: flex;
   justify-content: center;
